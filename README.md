@@ -1,7 +1,7 @@
 <img src="assets/GQA_fig_2.png" width='600px'></img> 
 <img src="assets/deformable_attention_figure_2.png" width='600px'></img>
 
-PyTorch implementation combining grouped-query attention (GQA) from (https://arxiv.org/abs/2305.13245) with deformable attention (https://arxiv.org/abs/2201.00520). Adapted from the deformable attention implementation by Lucidrains, https://github.com/lucidrains/deformable-attention.
+PyTorch implementation combining grouped-query attention (GQA) from (https://arxiv.org/abs/2305.13245) with deformable attention (https://arxiv.org/abs/2201.00520). Adapted from the deformable attention implementation by Lucidrains, https://github.com/lucidrains/deformable-attention with inspiration taken from https://github.com/fkodom/grouped-query-attention-pytorch.
 
 The code in this repository was tested with python 3.10 on Ubuntu 24.04.
 
