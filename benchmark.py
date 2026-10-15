@@ -3,10 +3,10 @@ import torch
 
 from deformable_gqa import DeformableAttention2D
 
-batch_size = 4096
-embedding_dimension = 512
-width = 4
-height = 4
+batch_size = 4
+embedding_dimension = 4096
+width = 2
+height = 2
 x = torch.randn(batch_size, embedding_dimension, width, height, device="cuda")
 
 n_warmups = 60
@@ -18,14 +18,14 @@ for g in groups:
     print(g)
     attn = DeformableAttention2D(
         dim=embedding_dimension,  # feature dimensions
-        dim_head=64,  # dimension per head
+        dim_head=1024,  # dimension per head
         heads=32,  # attention heads
         num_groups=g,
         dropout=0.0,  # dropout
-        downsample_factor=4,  # downsample factor (r in paper)
-        offset_scale=4,  # scale of offset, maximum offset
-        offset_groups=None,  # number of offset groups, should be multiple of heads
-        offset_kernel_size=6,  # offset kernel size
+        downsample_factor=1,  # downsample factor (r in paper)
+        offset_scale=1,  # scale of offset, maximum offset
+        offset_groups=1,  # number of offset groups, should be multiple of heads
+        offset_kernel_size=3,  # offset kernel size
         device="cuda",
     )
 
