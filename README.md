@@ -34,7 +34,7 @@ python benchmark.py
 
 Note that GQA does not reduce the amount of computation required for deformable attention, it only reduces the amount of memory used. If the execution speed is not memory bandwith limited, you will not see any significant speed-up. The benchmark was run on an RTX 4090.
 
-<img src="assets/results.png" width='600px'></img> 
+<img src="assets/results.png?v=2" width='600px'></img> 
 
 If we compare the graph from our deformable GQA benchmark to the benchmark results from the original GQA paper, which applied the grouped query mechanism to regular scaled dot product attention, we see that they have similar shapes. Quantitatively they are very different; this is to be expected, since we use different hardware, different batch size, sequence length, embedding dimension etc. and a different form of attention.
 
